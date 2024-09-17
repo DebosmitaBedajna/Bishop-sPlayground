@@ -13,4 +13,15 @@ var SQUARES={A1:21, B1:22, C1:23, D1:24, E1:25, F1:26, G1:27, H1:28,
     A8:91, B8:92, C8:93, D8:94, E8:95, F8:96, G8:97, H8:98,
     NO_SQ:99, OFFBOARD:100
 };
+/*
+WKCA: White King Castling Account
+How the castling works:
+0001->WKCA
+0010->WQKA
+0100->BKCA
+1000->BQCA
+We keep a track of the castling information with the CastleP integer.
+We do a bitwise and with the CASTLEBITs to check if black has castling information or if white has so.
+*/
+var CASTLEBIT = {WKCA : 1, WQCA: 2, BKCA: 4, BQCA: 8}
 var BOOL={FALSE:0, TRUE:1};
