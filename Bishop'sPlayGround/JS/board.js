@@ -1,3 +1,9 @@
+//Macro to calculate the actual square number where it is from the piece list:
+/* LOGIC: Takes the piece and multiplies it by 10 + the number of that piece to effectively fetch that specific piece from the plist */
+function PCEINDEX(pce,pceNum){
+    return (pce*10+pceNum);
+}
+
 var Gameboard= {};
 Gameboard.pieces = new Array(BRD_SQ_NUM);
 Gameboard.side=COLOUR.WHITE;
@@ -13,3 +19,7 @@ Or: move the king on the RHS, putting the rook on the LHS square beside it->King
 Condition: The king and the rooks have never moved from their original position 
 */
 Gameboard.castleP = 0;
+Gameboard.material= new Array(2); //White/black material of pieces;
+//We need to keep a track of all the pieces we have and whhere it is -> piece list
+Gameboard.pceNum=new Array(13);//Same indexing as the piece declaration-Tracks how many of one piece is in the board.
+Gameboard.pList= new Array(14*10);
