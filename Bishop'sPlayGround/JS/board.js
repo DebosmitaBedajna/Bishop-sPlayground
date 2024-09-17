@@ -1,5 +1,5 @@
 //Macro to calculate the actual square number where it is from the piece list:
-/* LOGIC: Takes the piece and multiplies it by 10 + the number of that piece to effectively fetch that specific piece from the plist */
+/* LOGIC: Takes the piece and multiplies it by 10(max no. of elements of one type assumed to be 10) + the number of that piece to effectively fetch that specific piece from the plist */
 function PCEINDEX(pce,pceNum){
     return (pce*10+pceNum);
 }
