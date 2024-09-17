@@ -14,6 +14,7 @@ Gameboard.fiftyMove = 0;
 Gameboard.hisPly=0;
 //The ply keeps a track of the half moves for all the moves in the search tree. It helps in generating all possible moves for one position. 
 Gameboard.ply=0;
+Gameboard.enPas=0;
 /*Castle rule in chess: You can either move the king on the LHS and have the rook on the square beside the King->Queen side Castling.
 Or: move the king on the RHS, putting the rook on the LHS square beside it->King side Castling.
 Condition: The king and the rooks have never moved from their original position 
@@ -23,3 +24,4 @@ Gameboard.material= new Array(2); //White/black material of pieces;
 //We need to keep a track of all the pieces we have and whhere it is -> piece list
 Gameboard.pceNum=new Array(13);//Same indexing as the piece declaration-Tracks how many of one piece is in the board.
 Gameboard.pList= new Array(14*10);
+Gameboard.posKey=0;
